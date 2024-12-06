@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Triangle Pointer</title>
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the button */
+.button-with-pointer {
+    position: relative;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Triangle pointer using the :after pseudo-element */
+.triangle-pointer {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+    bottom: -10px; /* Position below the button */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Optional: Add hover effect for the button */
+.button-with-pointer:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <button class="button-with-pointer">
+        Click Me
+        <span class="triangle-pointer"></span>
+    </button>
+</body>
+</html>
